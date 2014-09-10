@@ -23,7 +23,7 @@ function single_blog_list($number) {
   single_blog_modulebuilding
   // Use the database API to retrieve our data.
   // @see http://drupal.org/node/310069
-  $query = db_select('node', 'n')
+  $query = db_select('node', 'n') // Not working correctly
   ->fields('n', array('nid', 'title', 'created', 'uid'))
   ->condition('type', SINGLE_BLOG_NODE_TYPE)
   ->condition('status', 1)
